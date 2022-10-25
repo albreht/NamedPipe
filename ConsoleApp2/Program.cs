@@ -31,7 +31,7 @@ namespace WCFClient
             Console.WriteLine($"=================NAMED PIPE TEST CLIENT=============");
             Console.WriteLine($"Press any key to start send");
 
-            Console.ReadLine();
+            Console.Read();
             Console.WriteLine("Sending 1k messages");
             while (true)
             {
