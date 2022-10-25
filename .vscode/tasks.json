@@ -1,0 +1,64 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ConsoleApp4/ConsoleApp4.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build release",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/ConsoleApp4/ConsoleApp4.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary",
+                "-c",
+                "Release"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/ConsoleApp4/ConsoleApp4.csproj",
+                "/property:GenerateFullPaths=true",
+                "/consoleloggerparameters:NoSummary"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "--project",
+                "${workspaceFolder}/ConsoleApp4/ConsoleApp4.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "type": "msbuild",
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": "build",
+            "label": "Build: ConsoleApp4.csproj",
+            "detail": "Build the ConsoleApp4.csproj project using dotnet build"
+        }
+    ]
+}
